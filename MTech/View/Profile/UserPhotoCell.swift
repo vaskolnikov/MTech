@@ -90,16 +90,13 @@ class UserPhotoCell: UITableViewCell {
     }
     
     func setData(user:User) {
-//        if user.image != nil {
-//            userPhoto.image = user.image
-//        } else {
-//            let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
-//            userPhoto.image = profileIcon
-//        }
-        let imageDefaults = UserDefaults()
-        let bgImage = imageDefaults.imageForKey(key: "imageDefaults")!
-        userPhoto.image = bgImage
-
+        if let imageData = UserDefaults.standard.value(forKey: "userImage") as? Data {
+            let imageFromData = UIImage(data: imageData)
+            userPhoto.image = imageFromData!
+        } else {
+            let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            userPhoto.image = profileIcon
+        }
     }
     
     @objc func photoClicked() {

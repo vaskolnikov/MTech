@@ -103,24 +103,6 @@ extension User {
         UserDefaults.standard.synchronize()
     }
     
-    
 }
 
 
-extension UserDefaults {
-    func imageForKey(key: String) -> UIImage? {
-        //var image: UIImage?
-        var image = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
-        if let imageData = data(forKey: key) {
-            image = (NSKeyedUnarchiver.unarchiveObject(with: imageData) as? UIImage)!
-        }
-        return image
-    }
-    func setImage(image: UIImage?, forKey key: String) {
-        var imageData: NSData?
-        if let image = image {
-            imageData = NSKeyedArchiver.archivedData(withRootObject: image) as NSData?
-        }
-        set(imageData, forKey: key)
-    }
-}

@@ -109,10 +109,10 @@ class ProfileViewController: ViewController, UIImagePickerControllerDelegate, UI
            self.dismiss(animated: true) { [weak self] in
 
                guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-               //Setting image to your image view
-                //self?.currentUser?.image = image
-                let imageDefaults = UserDefaults()
-                imageDefaults.setImage(image: image, forKey: "imageDefaults")
+   
+            
+                UserDefaults.standard.register(defaults: ["userImage":image.jpegData(compressionQuality: 100)!])
+                UserDefaults.standard.set(image.jpegData(compressionQuality: 100), forKey: "userImage")
 
                 let indexPath = IndexPath(item: 0, section: 0)
                 DispatchQueue.main.async {
@@ -132,10 +132,7 @@ class ProfileViewController: ViewController, UIImagePickerControllerDelegate, UI
     @objc func saveClicked() {
         //print(#function)
         self.saveTapped = true
-//        if self.name == "" || self.lastName ==  "" || self.email == "" {
-//
-//        }
-        
+
         let indexPath = IndexPath(item: 0, section: 1)
                 
         DispatchQueue.main.async {
