@@ -21,7 +21,7 @@ class NewsViewController: ViewController, XMLParserDelegate, SlideMenuDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Haberler"
+        self.navigationItem.title = "MTEK"
         setupUI()
         loadData()
         
