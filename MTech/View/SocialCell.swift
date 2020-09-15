@@ -40,13 +40,16 @@ class SocialCell: UITableViewCell {
            let iconImageView = SPImageView()
            iconImageView.translatesAutoresizingMaskIntoConstraints = false
            iconImageView.contentMode = .scaleAspectFit
-           var icon = UIImage.fontAwesomeIcon(name:.twitter , style: .brands, textColor: .white, size: CGSize(width: 25, height: 25))
+           //var icon = UIImage.fontAwesomeIcon(name:.twitter , style: .brands, textColor: .white, size: CGSize(width: 25, height: 25))
+        
+           var  icon = UIImage.init(icon: .fontAwesomeBrands(.twitter), size: CGSize(width: 25, height: 25), textColor: Global.appColor)
+
            if i == 0 {
-            icon = UIImage.fontAwesomeIcon(name:.pinterest , style: .brands, textColor: Global.appColor, size: CGSize(width: 25, height: 25))
+            icon = UIImage.init(icon: .fontAwesomeBrands(.pinterest), size: CGSize(width: 25, height: 25), textColor: Global.appColor)
            } else if i == 1 {
-               icon = UIImage.fontAwesomeIcon(name:.twitter , style: .brands, textColor: Global.appColor, size: CGSize(width: 25, height: 25))
+               icon = UIImage.init(icon: .fontAwesomeBrands(.twitter), size: CGSize(width: 25, height: 25), textColor: Global.appColor)
            } else {
-               icon = UIImage.fontAwesomeIcon(name: .google, style: .brands, textColor: Global.appColor, size: CGSize(width: 25, height: 25))
+               icon = UIImage.init(icon: .fontAwesomeBrands(.google), size: CGSize(width: 25, height: 25), textColor: Global.appColor)
            }
            iconImageView.image = icon
            iconImageView.tag = i

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FontAwesome_swift
+import SwiftIcons
 
 protocol PharmacyCellDelegate:class{
     func topButtonTouched(indexPath:IndexPath)
@@ -56,7 +56,7 @@ class PharmacyCell: UICollectionViewCell {
         topButton = SPButton()
         topButton.translatesAutoresizingMaskIntoConstraints = false
         bgView.addSubview(topButton)
-        let arrowUp = UIImage.fontAwesomeIcon(name: .arrowDown, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+        let arrowUp = UIImage.init(icon: .fontAwesomeSolid(.arrowDown), size: CGSize(width: 35, height: 35), textColor: .red)
         topButton.setImage(arrowUp)
         topButton.addTarget(self, action: #selector(topButtonTouched), for: .touchUpInside)
         
@@ -87,7 +87,9 @@ class PharmacyCell: UICollectionViewCell {
         mapImageView = SPImageView()
         mapImageView.translatesAutoresizingMaskIntoConstraints = false
         bgView.addSubview(mapImageView)
-        let mapIcon = UIImage.fontAwesomeIcon(name: .locationArrow, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+        
+        let mapIcon = UIImage.init(icon: .fontAwesomeSolid(.locationArrow), size: CGSize(width: 20, height: 20), textColor: Global.appColor)
+        
         mapImageView.image = mapIcon
         mapImageView.isHidden = true
         
@@ -139,9 +141,14 @@ class PharmacyCell: UICollectionViewCell {
             phoneLabel.isHidden = false
             mapImageView.isHidden = false
 
-            icon = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+//            icon = UIImage.fontAwesomeIcon(name: .arrowUp, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+            
+            icon = UIImage.init(icon: .fontAwesomeSolid(.arrowUp), size: CGSize(width: 20, height: 20), textColor: Global.appColor)
+
         } else {
-            icon = UIImage.fontAwesomeIcon(name: .arrowDown, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+//            icon = UIImage.fontAwesomeIcon(name: .arrowDown, style: .solid, textColor: Global.appColor, size: CGSize(width: 20, height: 20))
+            icon = UIImage.init(icon: .fontAwesomeSolid(.arrowDown), size: CGSize(width: 20, height: 20), textColor: Global.appColor)
+
             addressLabel.isHidden = true
             phoneLabel.isHidden = true
             mapImageView.isHidden = true

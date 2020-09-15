@@ -107,22 +107,29 @@ class MenuViewController: ViewController, UITableViewDataSource, UITableViewDele
         menuName.font = Global.Font.Cell.boldTitle
         cell.addSubview(menuName)
         
-        var icon  = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+//        var icon  = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+        var icon = UIImage.init(icon: .fontAwesomeSolid(.newspaper), size: CGSize(width: 35, height: 35), textColor: Global.appColor)
+
         var name: String = "Haberler"
         
         if indexPath.row == 0 {
             name = "Haberler"
-            icon = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            icon = UIImage.init(icon: .fontAwesomeSolid(.newspaper), size: CGSize(width: 35, height: 35), textColor: Global.appColor)
+//            icon = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
         } else  if indexPath.row == 1 {
-            icon = UIImage.fontAwesomeIcon(name: .fileMedical, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+//            icon = UIImage.fontAwesomeIcon(name: .fileMedical, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            icon = UIImage.init(icon: .fontAwesomeSolid(.fileMedical), size: CGSize(width: 35, height: 35), textColor: Global.appColor)
+
             name = "Eczaneler"
 
         } else if indexPath.row == 2 {
-            icon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            icon = UIImage.init(icon: .fontAwesomeSolid(.user), size: CGSize(width: 35, height: 35), textColor: Global.appColor)
+//            icon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
             name = "Profilim"
 
         } else if indexPath.row == 3 {
-            icon = UIImage.fontAwesomeIcon(name: .signOutAlt, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            icon = UIImage.init(icon: .fontAwesomeSolid(.signOutAlt), size: CGSize(width: 35, height: 35), textColor: .red)
+//            icon = UIImage.fontAwesomeIcon(name: .signOutAlt, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
             name = "Cikis"
         } else {
             let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: SocialCell.identifire) as! SocialCell

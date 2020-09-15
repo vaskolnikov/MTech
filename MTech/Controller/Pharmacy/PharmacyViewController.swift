@@ -49,7 +49,9 @@ class PharmacyViewController: ViewController {
         
         let button = SPButton()
         
-        let filterIcon = UIImage.fontAwesomeIcon(name: .filter, style: .solid, textColor: SPNativeColors.white, size: CGSize(width: 30, height: 30))
+//        let filterIcon = UIImage.fontAwesomeIcon(name: .filter, style: .solid, textColor: SPNativeColors.white, size: CGSize(width: 30, height: 30))
+        let filterIcon = UIImage.init(icon: .fontAwesomeSolid(.filter), size: CGSize(width: 35, height: 35), textColor: Global.appColor)
+
         button.setImage(filterIcon)
         button.addTarget(self, action:#selector(filterClicked), for: .touchDragInside)
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)

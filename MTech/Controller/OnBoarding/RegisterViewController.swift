@@ -11,7 +11,6 @@ import UIKit
 
 import UIKit
 import SkyFloatingLabelTextField
-import FontAwesome_swift
 import SPStorkController
 
 class RegisterViewController: ViewController, UIScrollViewDelegate {

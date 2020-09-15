@@ -32,7 +32,7 @@ class NewsViewController: ViewController, XMLParserDelegate, SlideMenuDelegate {
         
     }
     
-func slideMenuItemSelectedAtIndex(_ index: Int32) {
+    func slideMenuItemSelectedAtIndex(_ index: Int32) {
        let topViewController : UIViewController = self.navigationController!.topViewController!
        print("View Controller is : \(topViewController) \n", terminator: "")
     
@@ -159,7 +159,9 @@ func slideMenuItemSelectedAtIndex(_ index: Int32) {
     func addLogoutButton() {
         let button = SPButton()
         
-        let logoutIcon = UIImage.fontAwesomeIcon(name: .signOutAlt, style: .solid, textColor: SPNativeColors.white, size: CGSize(width: 30, height: 30))
+//        let logoutIcon = UIImage.fontAwesomeIcon(name: .signOutAlt, style: .solid, textColor: SPNativeColors.white, size: CGSize(width: 30, height: 30))
+        let logoutIcon = UIImage.init(icon: .fontAwesomeSolid(.signOutAlt), size: CGSize(width: 35, height: 35), textColor: .red)
+
         button.setImage(logoutIcon)
         button.addTarget(self, action:#selector(logout), for: .touchDragInside)
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)

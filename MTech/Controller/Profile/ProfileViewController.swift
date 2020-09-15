@@ -242,9 +242,7 @@ extension ProfileViewController:ProfileFieldsCellDelagete {
             if tag == 2 {
                 self.email = textfield.text!
             }
-        }
-    
-        
+        }        
     }
     
     func updateProfile(_ name: String, _ last: String, _ email: String) {

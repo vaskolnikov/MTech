@@ -1,6 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-MTech/Pods-MTech-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework
-${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework
 ${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
 ${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework
@@ -9,4 +8,5 @@ ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework
 ${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework
 ${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import FontAwesome_swift
-
+import SwiftIcons
 protocol UserPhotoCellDelegate:class {
     func openPhoto(cell: UITableViewCell, image: UIImage)
     func editPhoto()
@@ -39,7 +38,8 @@ class UserPhotoCell: UITableViewCell {
         userPhoto = SPImageView()
         userPhoto.translatesAutoresizingMaskIntoConstraints = false
         imageContainer.addSubview(userPhoto)
-        let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+        //let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+        let profileIcon = UIImage.init(icon: .fontAwesomeSolid(.user), size: CGSize(width: 35, height: 35), textColor: .red)
         userPhoto.image = profileIcon
 //        userPhoto.layer.masksToBounds = true
 //        userPhoto.layer.cornerRadius = 8
@@ -50,7 +50,8 @@ class UserPhotoCell: UITableViewCell {
         editButtonIcon = SPButton()
         editButtonIcon.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(editButtonIcon)
-        let editIcon = UIImage.fontAwesomeIcon(name: .edit, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+        let editIcon = UIImage.init(icon: .fontAwesomeSolid(.edit), size: CGSize(width: 35, height: 35), textColor: .red)
+
         editButtonIcon.setImage(editIcon)
         editButtonIcon.layer.masksToBounds = true
         editButtonIcon.layer.cornerRadius = 20
@@ -94,7 +95,9 @@ class UserPhotoCell: UITableViewCell {
             let imageFromData = UIImage(data: imageData)
             userPhoto.image = imageFromData!
         } else {
-            let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+//            let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+            let profileIcon = UIImage.init(icon: .fontAwesomeSolid(.user), size: CGSize(width: 35, height: 35), textColor: .red)
+
             userPhoto.image = profileIcon
         }
     }

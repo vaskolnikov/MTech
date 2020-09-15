@@ -8,7 +8,7 @@ target 'MTech' do
   # Pods for MTech
 
 # Pods for Makas
-    pod 'FontAwesome.swift'
+#    pod 'FontAwesome.swift'
     pod 'SDWebImage'
     pod 'SPStorkController'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
@@ -19,7 +19,7 @@ target 'MTech' do
     pod 'SwiftSoup'
     pod 'Eureka'
 
-
+    pod 'SwiftIcons'
 
        
 

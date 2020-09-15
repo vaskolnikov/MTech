@@ -10,9 +10,9 @@ import UIKit
 
 import UIKit
 import SkyFloatingLabelTextField
-import FontAwesome_swift
 import SPStorkController
 import JGProgressHUD
+import SwiftIcons
 
 class LoginViewController: ViewController, UITextFieldDelegate {
         
@@ -75,8 +75,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         
         showPassword = UIButton(frame: CGRect(x: view.frame.width - 40, y: 155, width: 30 , height: 30))
         showPassword.addTarget(self, action: #selector(showPasswordClicked), for: .touchUpInside)
-        showPassword.titleLabel?.font = UIFont.fontAwesome(ofSize: 16, style:. solid)
-        showPassword.setTitle(String.fontAwesomeIcon(name: .lock), for: .normal)
+        showPassword.setIcon(icon: .openIconic(.lockLocked), iconSize: 70, color: .blue, forState: .normal)
         showPassword.backgroundColor = Global.appColor
         showPassword.layer.cornerRadius = 15
         showPassword.layer.masksToBounds = true
@@ -155,11 +154,17 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     @objc func showPasswordClicked(sender: UIButton){
         if sender.tag == 0 {
             password.isSecureTextEntry = false
-            showPassword.setTitle(String.fontAwesomeIcon(name: .unlock), for: .normal)
+//            showPassword.setTitle(String.fontAwesomeIcon(name: .unlock), for: .normal)
+//            showPassword.setIcon(icon: .fontAwesomeIcon(.unlock), iconSize: 35, color: .white, bgColor: .clear)
+            showPassword.setIcon(icon: .openIconic(.lockUnlocked), iconSize: 35, color: .blue, forState: .normal)
             showPassword.tag = 1
         } else {
             password.isSecureTextEntry = true
-            showPassword.setTitle(String.fontAwesomeIcon(name: .lock), for: .normal)
+//            showPassword.setTitle(String.fontAwesomeIcon(name: .lock), for: .normal)
+//            showPassword.setIcon(icon: .fontAwesomeIcon(.lock), iconSize: 35, color: .white, bgColor: .clear)
+            showPassword.setIcon(icon: .openIconic(.lockLocked), iconSize: 35, color: .blue, forState: .normal)
+
+
             showPassword.tag = 0
         }
     }

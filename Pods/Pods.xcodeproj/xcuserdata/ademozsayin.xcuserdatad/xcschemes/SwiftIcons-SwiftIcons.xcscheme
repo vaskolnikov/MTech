@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4DC20DD2E50259D674257304EC016C93"
-               BuildableName = "FontAwesome.swift.bundle"
-               BlueprintName = "FontAwesome.swift-FontAwesome.swift"
+               BlueprintIdentifier = "FFA1A15AFDB5DA9D9A98596F92997762"
+               BuildableName = "SwiftIcons.bundle"
+               BlueprintName = "SwiftIcons-SwiftIcons"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

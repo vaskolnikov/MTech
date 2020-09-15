@@ -9,7 +9,8 @@
 
 import Foundation
 import UIKit
-import FontAwesome_swift
+//import FontAwesome_swift
+import SwiftIcons
 
 class MTechTabbarController: UITabBarController {
     
@@ -26,19 +27,25 @@ class MTechTabbarController: UITabBarController {
         let NewsController = UINavigationController(rootViewController: NewsViewController())
         NewsController.tabBarItem.title = "Haberler"
         NewsController.tabBarItem.image = UIImage(named: "common")
-        let newsIcon = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
-        NewsController.tabBarItem.image = newsIcon
+        //let newsIcon = UIImage.fontAwesomeIcon(name: .newspaper, style: .solid, textColor: Global.appColor, size: CGSize(width: 30, height: 30))
+        let i1 = UIImage.init(icon: .fontAwesomeSolid(.newspaper), size: CGSize(width: 35, height: 35), textColor: .red)
+
+        NewsController.tabBarItem.image = i1
 //
         let PharmacyController = UINavigationController(rootViewController:PharmacyViewController(networkManager: networkManager))
         PharmacyController.title = "Eczane"
-        let image2 = UIImage.fontAwesomeIcon(name: .fileMedical, style: .solid, textColor: .black, size: CGSize(width: 30, height: 30))
-        PharmacyController.tabBarItem.image = image2
+//        let image2 = UIImage.fontAwesomeIcon(name: .fileMedical, style: .solid, textColor: .black, size: CGSize(width: 30, height: 30))
+        let i2 = UIImage.init(icon: .fontAwesomeSolid(.fileMedical), size: CGSize(width: 35, height: 35), textColor: .red)
+
+        PharmacyController.tabBarItem.image = i2
 //
         let Profile = ProfileViewController()
         let ProfileController = UINavigationController(rootViewController:Profile)
         ProfileController.title = "Profil"
-        let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: .black, size: CGSize(width: 30, height: 30))
-        ProfileController.tabBarItem.image = profileIcon
+        let i3 = UIImage.init(icon: .fontAwesomeSolid(.user), size: CGSize(width: 35, height: 35), textColor: .red)
+
+//        let profileIcon = UIImage.fontAwesomeIcon(name: .user, style: .solid, textColor: .black, size: CGSize(width: 30, height: 30))
+        ProfileController.tabBarItem.image = i3
 
         viewControllers = [NewsController, PharmacyController, ProfileController]
 
